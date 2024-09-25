@@ -1,0 +1,9 @@
+# lib python
+.env
+
+# YOLO
+YOLO/videos
+YOLO/images
+
+# robot arm
+robot_arm/__pycache__
