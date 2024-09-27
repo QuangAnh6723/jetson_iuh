@@ -42,7 +42,7 @@ def go_pos(pos: int):
         # ser.write(b'#9P1259#11P1397#13P1017#15P845#17P1155#19P1500T500D500\r\n')
         # time.sleep(0.2)
         ser.write(b'#9P1259#11P1259#13P1017#15P845#17P1155#19P845T500D500\r\n')
-        # time.sleep(0.2)
+    time.sleep(0.2)
         
         # print(__pos_init)
 

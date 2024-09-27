@@ -1,6 +1,7 @@
 import cv2
 import arm 
 from ultralytics import YOLO
+import time
 
 model = YOLO("YOLO/v1.pt")
 
@@ -34,6 +35,7 @@ while cap.isOpened():
         print(pl)
         print(conf_max)
         arm.go_pos(pl)
+
 
         # Break the loop if 'q' is pressed
         if cv2.waitKey(1) & 0xFF == ord("q"):
