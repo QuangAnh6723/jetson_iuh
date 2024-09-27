@@ -3,10 +3,12 @@ import arm
 from ultralytics import YOLO
 import time
 
-model = YOLO("YOLO/v1.pt")
+model = YOLO("v1.pt")
 
 video_path = "./YOLO/video/nhieumau.mp4"
 cap = cv2.VideoCapture(0)
+
+cls_id_odd = -1
 
 while cap.isOpened():
     success, frame = cap.read()
@@ -17,7 +19,8 @@ while cap.isOpened():
         cv2.imshow("YOLOv8 Inference", annotated_frame)
 
         pl = -1
-        conf_max = 0    
+        conf_max = 0 
+        
         for box in results[0].boxes:
             print('======== lay mau ===========')
 
@@ -31,11 +34,13 @@ while cap.isOpened():
                 conf_max = confidence
                 pl = cls_id
 
-        print("==========ket qua cuoi cung=========")
-        print(pl)
-        print(conf_max)
-        arm.go_pos(pl)
-
+            
+        if pl != cls_id_odd:
+            print("==========ket qua cuoi cung=========")
+            print(pl)
+            print(conf_max)
+            arm.go_pos(pl)
+            cls_id_odd = pl
 
         # Break the loop if 'q' is pressed
         if cv2.waitKey(1) & 0xFF == ord("q"):
