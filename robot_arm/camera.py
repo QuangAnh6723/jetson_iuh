@@ -33,7 +33,6 @@ while cap.isOpened():
             if( conf_max < confidence):
                 conf_max = confidence
                 pl = cls_id
-
             
         if pl != cls_id_odd:
             print("==========ket qua cuoi cung=========")
