@@ -14,7 +14,7 @@ while cap.isOpened():
     success, frame = cap.read()
 
     if success:
-        results = model(frame)
+        results = model(frame, device=0)
         annotated_frame = results[0].plot()
         cv2.imshow("YOLOv8 Inference", annotated_frame)
 
@@ -39,11 +39,15 @@ while cap.isOpened():
             print("==========ket qua cuoi cung=========")
             print(pl)
             print(conf_max)
+
+            # if pl > 0.5:
             arm.go_pos(pl)
             cls_id_odd = pl
 
         # Break the loop if 'q' is pressed
         if cv2.waitKey(1) & 0xFF == ord("q"):
+            cap.release()
+            cv2.destroyAllWindows()
             break
     else:
         # Break the loop if the end of the video is reached
