@@ -1,6 +1,7 @@
 import time
 import serial
 
+
 ser = serial.Serial(
     port='/dev/ttyACM0',
     #port='COM3',
@@ -36,8 +37,9 @@ def go_pos(pos: int):
     else:
         print('pos init ')
         ser.write(b'#9P1259#11P1259#13P1017#15P845#17P1155#19P845T500D500\r\n')
-    time.sleep(0.2)
-        
-        # print(__pos_init)
+    # time.sleep(0.2)
 
-    
+
+def init():
+    print(init.__name__)
+    go_pos(-1)

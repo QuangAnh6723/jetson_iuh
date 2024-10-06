@@ -18,3 +18,5 @@ pip install -r requirements.txt
 https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform-release-notes/tf-jetson-rel.html#tf-jetson-rel <br>
 https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html <br>
 
+ultralytics segment
+https://docs.ultralytics.com/tasks/segment/#export <br>

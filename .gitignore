@@ -7,3 +7,4 @@ YOLO/images
 
 # robot arm
 robot_arm/__pycache__
+misc/__pycache__
