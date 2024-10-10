@@ -42,7 +42,7 @@ def padding_right(msg):
     print(msg)
     return msg
 
-def trai(msg str, line int):
+def trai(msg:str, line:int):
     print("can trai")
     # print(len(qa))
     lcdDisplay.set(padding_left(msg),line)
@@ -50,14 +50,14 @@ def trai(msg str, line int):
     # lcdDisplay.set(padding_left(hung),3)
     # lcdDisplay.clear()
 
-def giua(msg str, line int):
+def giua(msg:str, line:int):
     print("can giua")
     lcdDisplay.set(padding_center(msg),line)
     # lcdDisplay.set(padding_center(vy),2)
     # lcdDisplay.set(padding_center(hung),3)
     # lcdDisplay.clear()
     
-def phai(msg str, line int):
+def phai(msg:str, line:int):
     print("can phai") 
     lcdDisplay.set(padding_right(msg),line)
     # lcdDisplay.set(padding_right(vy),2)

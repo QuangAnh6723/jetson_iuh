@@ -10,9 +10,10 @@ def off_all():
 
 
 # on 1 led off all
-def on_Led(pin int):
+def on_Led(pin:int):
     # off_all()
     GPIO.output(pinLeds[pin], GPIO.LOW)
+
 
 def init():
     GPIO.setmode(GPIO.BOARD)  # BOARD pin-numbering scheme

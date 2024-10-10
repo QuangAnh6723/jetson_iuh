@@ -49,7 +49,7 @@ def go(m:int, dir: int):
             m1_ngich()
         else:
             m1_stop()
-    else m == 2:
+    elif m == 2:
         if dir == CW:
             m2_thuan()
         elif dir == CCW:
